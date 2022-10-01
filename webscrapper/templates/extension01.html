@@ -1,0 +1,97 @@
+{% extends 'index.html' %}
+
+{% comment %} <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Extension</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body> {% endcomment %}
+
+
+    {% block title %}Extension{% endblock title %}
+
+    {% block style %}
+    
+    <style>
+        .extensions{
+            padding:15px;
+            width: 100%;
+            font-size: 1.5em;
+            background-color: aqua;
+            border-color: black;
+            border-radius: 15%;
+            
+        }
+    </style>
+
+
+    {% endblock style %}
+
+    {% block body01 %}
+     {% comment %} <h1><i class="Extension" aria-hidden="true"></i></h1>
+
+        
+         <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="your_url">
+            <input type="submit" name="">
+
+        </form>
+
+    {% for i in value%}
+
+        <img src="{{i}}">
+        
+    {% endfor %} {% endcomment %}
+     
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <h1><i class="Extension" aria-hidden="true"></i></h1>
+
+        <div class="extension">
+         <form method="POST">
+            {% csrf_token %}
+            <div>
+            <select name="cars" id="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+            <input type="text" name="your_url">
+            <input type="submit" name="">
+            <a name="CSV" id="CSV" class="btn btn-primary" href="/CSV" role="button">Download</a>
+
+        </form>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+
+    {% for i in value%}
+
+        <img src="{{i}} ">
+        
+    {% endfor %} 
+
+
+    
+    
+    {% endblock body01 %}
+        
+        {% comment %} <script src="" async defer></script>
+    </body>
+</html> {% endcomment %}

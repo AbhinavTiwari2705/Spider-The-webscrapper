@@ -1,0 +1,24 @@
+{% extends 'Extension.html' %}
+{% block main-content %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {% if messages %}
+                 {% for message in messages %}
+                    <strong>{{message}}</strong>
+                 {% endfor %}
+              {% endif %} 
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  {% for i in value %}
+
+          <img src="{{i}} ">
+        
+        {% endfor %} 
+
+          <a href="/CSV" class="btn2"><button id="sumBtn" type="CSV" ><i class="fa fa-download" aria-hidden="true" onclick="myfunct()">Download</i></button></a>
+        </div>
+      </div>
+    </div>
+{% endblock main-content %}
+
