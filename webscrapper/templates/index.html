@@ -4,20 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>{% block title %}Web Scraper{% endblock title %}</title>
   {% load static %}
-  <link rel="stylesheet" href= {% static 'abcd.css' %}>
+   <link rel="stylesheet" href={% static 'abcd.css' %}> 
+  {% comment %} <link rel="stylesheet" href="index.css"> {% endcomment %}
 </head>
 <style>
-  
+
 </style>
 {% block style %}
 
 {% endblock style %}
-  
+
 <body>
-  
+
 
 
   <!-- Header -->
@@ -37,7 +38,7 @@
             <li><a href="#hero" data-after="Home">Home</a></li>
             <li><a href="#services" data-after="Service">Project Info</a></li>
             <li><a href="#projects" data-after="Projects">Web Scraper Feature</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
+            {% comment %} <li><a href="#about" data-after="About">About</a></li> {% endcomment %}
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
@@ -45,25 +46,27 @@
     </div>
   </section>
   <!-- End Header -->
-
+{% comment %} <img class="top-image" src={% static 'spider.png' %}> {% endcomment %}
 
   <!-- Hero Section  -->
+  
   <section id="hero">
-    <div id="particles-js">
+    
+    <div id="particles-js" class="particle-js">
       <script src={% static 'particles.js' %}></script>
       <script src={% static 'app.js' %}></script>
-    <div class="hero container">
-      <div>
-        <h1> Welcome <span></span></h1>
-        <h1>To The Web Scraper<span></span></h1>
-        <h1>Scraper name <span></span></h1>
-        <a href="\Extension" type="button" class="cta">Webscrapper</a>
+      <div class="hero container">
+        <div class="top-container">
+          <h1> Welcome <span></span></h1>
+          <h1>To The Web Scraper<span></span></h1>
+          <h1>Spider <span></span></h1>
+          <a href="\Extension" type="button" class="cta">Webscrapper</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="alert alert-success m-2 " id="msg" role="alert">
-    Alert!
-  </div>
+    <div class="alert alert-success m-2 " id="msg" role="alert">
+      Alert!
+    </div>
   </section>{% block body01 %}{% endblock body01 %}
   <!-- End Hero Section  -->
 
@@ -71,35 +74,43 @@
   <section id="services">
     <div class="services container">
       <div class="service-top">
-        <h1 class="section-title">Project<span>  i</span>nfo</h1>
-        <p>Web scraping, web harvesting, or web data extraction is data scraping used for extracting data from websites. Web scraping software may directly access the World Wide Web using the Hypertext Transfer Protocol or a web browser. While web scraping can be done manually by a software user, the term typically refers to automated processes implemented using a bot or web crawler. It is a form of copying in which specific data is gathered and copied from the web, typically into a central local database or spreadsheet, for later retrieval or analysis.
+        <h1 class="section-title">Project<span> i</span>nfo</h1>
+        <p>Web scraping, web harvesting, or web data extraction is data scraping used for extracting data from websites.
+          Web scraping software may directly access the World Wide Web using the Hypertext Transfer Protocol or a web
+          browser. While web scraping can be done manually by a software user, the term typically refers to automated
+          processes implemented using a bot or web crawler. It is a form of copying in which specific data is gathered
+          and copied from the web, typically into a central local database or spreadsheet, for later retrieval or
+          analysis.
 
-          Scraping a web page involves fetching it and extracting from it. Fetching is the downloading of a page (which a browser does when a user views a page). Therefore, web crawling is a main component of web scraping, to fetch pages for later processing. Once fetched, extraction can take place. The content of a page may be parsed, searched and reformatted, and its data copied into a spreadsheet or loaded into a database. Web scrapers typically take something out of a page, to make use of it for another purpose somewhere else. An example would be finding and copying names and telephone numbers, companies and their URLs, or e-mail addresses to a list (contact scraping).</p>
+          Scraping a web page involves fetching it and extracting from it. Fetching is the downloading of a page (which
+          a browser does when a user views a page). Therefore, web crawling is a main component of web scraping, to
+          fetch pages for later processing. Once fetched, extraction can take place. The content of a page may be
+          parsed, searched and reformatted, and its data copied into a spreadsheet or loaded into a database. Web
+          scrapers typically take something out of a page, to make use of it for another purpose somewhere else. An
+          example would be finding and copying names and telephone numbers, companies and their URLs, or e-mail
+          addresses to a list (contact scraping).</p>
       </div>
       <div class="service-bottom">
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Dynamic website </h2>
+          <p>Web Scraper can visit multiple levels of a website and will scrap you out your desired data</p>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Scalable Tech </h2>
+          <p>Web Scraper is built on cloud technologies and can scale with you on any your device</p>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>How it Workes</h2>
+          <p>Web scraping is the process of extracting data from a website using technique called crawling.</p>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Ai &
+             ML</h2>
+          <p>Web  scraper  resulting   data can be used for training module for AI & ML.</p>
         </div>
       </div>
     </div>
@@ -117,17 +128,20 @@
           <div class="project-info">
             <h1>Feature 1</h1>
             <h2>Export data in CSV, XLSX and JSON formats</h2>
-            <p>Build scrapers, scrape sites and export data in CSV format directly from your browser. Use Web Scraper Cloud to export data in CSV, XLSX and JSON formats, access it via API, webhooks or get it exported via Dropbox, Google Sheets or Amazon S3.</p>
+            <p>Build scrapers, scrape sites and export data in CSV format directly from your browser. Use Web Scraper
+              Cloud to export data in CSV, XLSX and JSON formats, access it via API, webhooks or get it exported via
+              Dropbox, Google Sheets or Amazon S3.</p>
           </div>
           <div class="project-img">
-            <img src="https://webscraper.io/images/landing/data-table-exported-csv.png "alt="img">
+            <img src="https://webscraper.io/images/landing/data-table-exported-csv.png " alt="img">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>Feature 2</h1>
             <h2>Modular selector system</h2>
-            <p>Web Scraper allows you to build Site Maps from different types of selectors. This system makes it possible to tailor data extraction to different site structures.</p>
+            <p>Web Scraper allows you to build Site Maps from different types of selectors. This system makes it
+              possible to tailor data extraction to different site structures.</p>
           </div>
           <div class="project-img">
             <img src="https://webscraper.io/images/landing/modular-selectors.png" alt="img">
@@ -137,7 +151,8 @@
           <div class="project-info">
             <h1>Featuret 3</h1>
             <h2>Built for the modern web</h2>
-            <p>Websites today are built on top of JavaScript frameworks that make user interface easier to use but are less accessible to scrapers. Web Scraper solves this by:
+            <p>Websites today are built on top of JavaScript frameworks that make user interface easier to use but are
+              less accessible to scrapers. Web Scraper solves this by:
 
               Full JavaScript execution
               Waiting for Ajax requests
@@ -146,14 +161,15 @@
           </div>
           <div class="project-img">
             <img src="https://webscraper.io/images/landing/website-scroll-down-and-load-more.gif" alt="img">
-            
+
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>Feature 4</h1>
             <h2>Extract data from dynamic web sites</h2>
-            <p>Web Scraper can extract data from sites with multiple levels of navigation. It can navigate a website on all levels.
+            <p>Web Scraper can extract data from sites with multiple levels of navigation. It can navigate a website on
+              all levels.
 
               Categories and subcategories
               Pagination
@@ -167,7 +183,8 @@
           <div class="project-info">
             <h1>Feature 5</h1>
             <h2>Point and click interface</h2>
-            <p>Our goal is to make web data extraction as simple as possible. Configure scraper by simply pointing and clicking on elements. No coding required.</p>
+            <p>Our goal is to make web data extraction as simple as possible. Configure scraper by simply pointing and
+              clicking on elements. No coding required.</p>
           </div>
           <div class="project-img">
             <img src="https://webscraper.io/images/landing/point-and-click-interface.gif " alt="img">
@@ -179,7 +196,7 @@
   <!-- End Projects Section -->
 
   <!-- About Section -->
-  <section id="about">
+  <!-- <section id="about">
     <div class="about container">
       <div class="col-left">
         <div class="about-img">
@@ -197,7 +214,7 @@
         <a href="#" class="cta">Download Resume</a>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- End About Section -->
 
   <!-- Contact Section -->
@@ -239,7 +256,7 @@
   <section id="footer">
     <div class="footer container">
       <div class="brand">
-        <h1><span>S</span>craper <span>N</span>ame</h1>
+        <h1><span>S</span>pider </h1>
       </div>
       <h2>Your Complete Web Solution</h2>
       <div class="social-icon">
@@ -249,31 +266,32 @@
         <div class="social-item">
           <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
         </div>
-        <div class="social-item">
+        <!-- <div class="social-item">
           <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-        </div>
+        </div> -->
         <div class="social-item">
           <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
         </div>
       </div>
-      <p>Copyright © 2022 Kshitish. All rights reserved</p>
+      <p>Copyright © 2022 Group Spider. All rights reserved</p>
     </div>
   </section>
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+  </div>
   <!-- End Footer -->
   <script src="./app.js"></script>
-{% comment %} {% block body02 %}{% endblock body02 %} {% endcomment %}
-<script>
-  setTimeout(function(){
-    if($('#msg').length > 0){
-      $('#msg').remove();
-    }
-    
-  },2000)
+  {% comment %} {% block body02 %}{% endblock body02 %} {% endcomment %}
+  <script>
+    setTimeout(function () {
+      if ($('#msg').length > 0) {
+        $('#msg').remove();
+      }
 
-</body>
+    }, 2000)
+    </script>
+
+</body >
 
 
-</html>
+</html >

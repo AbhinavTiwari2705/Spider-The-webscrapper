@@ -35,7 +35,7 @@ def Extension(request):
 
             response= requests.get(form)
             scrapval= bs4.BeautifulSoup(response.text,"html.parser")
-            messages.success(request, "you can download now")
+            messages.success(request, "Your file is ready to download!")
             for data in scrapval.find_all('img'):
                 srcval =data.get('src')
                 print(srcval)
