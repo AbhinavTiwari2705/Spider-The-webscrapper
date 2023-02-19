@@ -81,6 +81,7 @@ def CSV(request):
     # for values in value:
     
     writer.writerow(value)
+    value.clear()
 
     return response
 
